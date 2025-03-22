@@ -101,40 +101,40 @@ if selected_chat != 'main' :
             days[6] = st.button("Sun")
 
         if days[0] :
-            st.write(st.session_state.plan_list[title][0]['aero']['title'])
-            st.video(st.session_state.plan_list[title][0]['aero']['link'])
-            st.write(st.session_state.plan_list[title][0]['ara']['title'])
-            st.video(st.session_state.plan_list[title][0]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][0]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][0]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][0]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][0]['ara']['link'])
         if days[1] :
-            st.write(st.session_state.plan_list[title][1]['aero']['title'])
-            st.video(st.session_state.plan_list[title][1]['aero']['link'])
-            st.write(st.session_state.plan_list[title][1]['ara']['title'])
-            st.video(st.session_state.plan_list[title][1]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][1]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][1]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][1]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][1]['ara']['link'])
         if days[2] :
-            st.write(st.session_state.plan_list[title][2]['aero']['title'])
-            st.video(st.session_state.plan_list[title][2]['aero']['link'])
-            st.write(st.session_state.plan_list[title][2]['ara']['title'])
-            st.video(st.session_state.plan_list[title][2]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][2]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][2]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][2]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][2]['ara']['link'])
         if days[3] :
-            st.write(st.session_state.plan_list[title][3]['aero']['title'])
-            st.video(st.session_state.plan_list[title][3]['aero']['link'])
-            st.write(st.session_state.plan_list[title][3]['ara']['title'])
-            st.video(st.session_state.plan_list[title][3]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][3]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][3]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][3]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][3]['ara']['link'])
         if days[4] :
-            st.write(st.session_state.plan_list[title][4]['aero']['title'])
-            st.video(st.session_state.plan_list[title][4]['aero']['link'])
-            st.write(st.session_state.plan_list[title][4]['ara']['title'])
-            st.video(st.session_state.plan_list[title][4]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][4]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][4]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][4]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][4]['ara']['link'])
         if days[5] :
-            st.write(st.session_state.plan_list[title][5]['aero']['title'])
-            st.video(st.session_state.plan_list[title][5]['aero']['link'])
-            st.write(st.session_state.plan_list[title][5]['ara']['title'])
-            st.video(st.session_state.plan_list[title][5]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][5]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][5]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][5]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][5]['ara']['link'])
         if days[6] :
-            st.write(st.session_state.plan_list[title][6]['aero']['title'])
-            st.video(st.session_state.plan_list[title][6]['aero']['link'])
-            st.write(st.session_state.plan_list[title][6]['ara']['title'])
-            st.video(st.session_state.plan_list[title][6]['ara']['link'])
+            st.write(st.session_state.plan_list[selected_chat][6]['aero']['title'])
+            st.video(st.session_state.plan_list[selected_chat][6]['aero']['link'])
+            st.write(st.session_state.plan_list[selected_chat][6]['ara']['title'])
+            st.video(st.session_state.plan_list[selected_chat][6]['ara']['link'])
             
 
 
@@ -147,13 +147,13 @@ if selected_chat != 'main' :
             num = daylist[dayselected]
 
             with fixbox[0][0] :
-                st.session_state.plan_list[title][num]['aero']['title'] = st.text_input("aero_title")
+                st.session_state.plan_list[selected_chat][num]['aero']['title'] = st.text_input("aero_title")
             with fixbox[0][1] :
-                st.session_state.plan_list[title][num]['aero']['link'] = st.text_input("aero_link")
+                st.session_state.plan_list[selected_chat][num]['aero']['link'] = st.text_input("aero_link")
             with fixbox[1][0] :
-                st.session_state.plan_list[title][num]['ara']['title'] = st.text_input("ara_title")
+                st.session_state.plan_list[selected_chat][num]['ara']['title'] = st.text_input("ara_title")
             with fixbox[1][1] :
-                st.session_state.plan_list[title][num]['ara']['link'] = st.text_input("ara_link")
+                st.session_state.plan_list[selected_chat][num]['ara']['link'] = st.text_input("ara_link")
 
             save = st.button("save")
 
@@ -161,7 +161,7 @@ if selected_chat != 'main' :
                 save_data()
 
             st.write(dayselected," :")
-            st.write("aero : " , st.session_state.plan_list[title][num]['aero']['title'])
-            st.write("ara : " , st.session_state.plan_list[title][num]['ara']['title'])
+            st.write("aero : " , st.session_state.plan_list[selected_chat][num]['aero']['title'])
+            st.write("ara : " , st.session_state.plan_list[selected_chat][num]['ara']['title'])
 
 

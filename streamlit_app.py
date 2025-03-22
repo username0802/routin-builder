@@ -53,7 +53,7 @@ with st.sidebar:
             st.warning("Please write a title before starting a new plan!")
 
     if delete_chat:
-        st.session_state.plan_list.remove(selected_chat)
+        del st.session_state.plan_list[selected_chat]
     if copy_chat :
         if title in st.session_state.plan_list :
             st.warning("Plan already exists. Please choose another title!")
